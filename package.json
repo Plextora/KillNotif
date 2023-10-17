@@ -1,7 +1,7 @@
 {
-  "name": "latite-scripting-template",
-  "version": "1.0.0",
-  "description": "A template for Latite Scripting",
+  "name": "kill-notif",
+  "version": "1.1.0",
+  "description": "Plays a sound whenever you kill someone on supported servers",
   "main": "index.js",
   "type": "module",
   "scripts": {
