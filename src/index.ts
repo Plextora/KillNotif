@@ -3,3 +3,12 @@ script.description =
   "Plays a sound whenever you kill someone on supported servers";
 script.version = "0.0.0";
 script.author = "Plextora";
+
+let mod: Module = new Module(
+  "KillNotif",
+  "Kill Notif",
+  script.description,
+  KeyCode.None
+);
+
+client.getModuleManager().registerModule(mod);
