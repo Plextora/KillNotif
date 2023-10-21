@@ -1,3 +1,4 @@
+// Script GitHub repository: https://github.com/Plextora/KillNotif
 // Currently only works on The Hive
 
 import { soundToPlay } from "./killSounds";
