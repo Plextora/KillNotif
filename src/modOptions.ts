@@ -1,5 +1,12 @@
 import { mod } from "./index";
 
+export let debugMode = mod.addBoolSetting(
+  "DebugMode",
+  "Debug mode",
+  "Logs stuff to chat",
+  false
+);
+
 export let soundVolume = mod.addNumberSetting(
   "SoundVolume",
   "Sound volume",
