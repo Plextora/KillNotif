@@ -4,16 +4,10 @@
 import { soundToPlay } from "./killSounds";
 import { soundVolume, soundPitch, debugMode } from "./modOptions";
 
-script.name = "Kill Notif";
-script.description =
-  "Plays a sound whenever you kill someone on supported servers";
-script.version = "1.4.2";
-script.author = "Plextora";
-
 export let mod: Module = new Module(
   "KillNotif",
   "Kill Notif",
-  script.description,
+  "Plays a sound whenever you kill someone on supported servers",
   KeyCode.None
 );
 

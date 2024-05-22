@@ -1,4 +1,4 @@
-import { mod } from "./index";
+import { mod } from "./main";
 
 export let debugMode = mod.addBoolSetting(
   "DebugMode",
