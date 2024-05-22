@@ -4,7 +4,7 @@
 import { getSelectedSound, soundToPlay } from "./killSounds";
 import { soundVolume, soundPitch, debugMode } from "./modOptions";
 
-export let mod: Module = new Module(
+export const mod: Module = new Module(
   "KillNotif",
   "Kill Notif",
   "Plays a sound whenever you kill someone on supported servers",

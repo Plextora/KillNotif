@@ -1,13 +1,13 @@
 import { mod } from "./main";
 
-export let debugMode = mod.addBoolSetting(
+export const debugMode = mod.addBoolSetting(
   "DebugMode",
   "Debug mode",
   "Logs stuff to chat",
   false
 );
 
-export let soundVolume = mod.addNumberSetting(
+export const soundVolume = mod.addNumberSetting(
   "SoundVolume",
   "Sound volume",
   "Loudness of kill sound (default is 1)",
@@ -16,7 +16,7 @@ export let soundVolume = mod.addNumberSetting(
   0.1,
   1
 );
-export let soundPitch = mod.addNumberSetting(
+export const soundPitch = mod.addNumberSetting(
   "PitchVolume",
   "Pitch volume",
   "Pitch of kill sound (default is 1)",
@@ -26,20 +26,25 @@ export let soundPitch = mod.addNumberSetting(
   1
 );
 
-export let useOrbSound = mod.addBoolSetting("OrbSound", "Orb sound", "", true);
-export let useExplosionSound = mod.addBoolSetting(
+export const useOrbSound = mod.addBoolSetting(
+  "OrbSound",
+  "Orb sound",
+  "",
+  true
+);
+export const useExplosionSound = mod.addBoolSetting(
   "ExplosionSound",
   "Explosion sound",
   "",
   false
 );
-export let useScreenshotSound = mod.addBoolSetting(
+export const useScreenshotSound = mod.addBoolSetting(
   "ScreenshotSound",
   "Screenshot sound",
   "",
   false
 );
-export let usePillagerDeathSound = mod.addBoolSetting(
+export const usePillagerDeathSound = mod.addBoolSetting(
   "PillagerDeathSound",
   "Pillager death sound",
   "",
