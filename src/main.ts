@@ -11,24 +11,24 @@ export const mod: Module = new Module(
   KeyCode.None
 );
 
+const playerName = game.getLocalPlayer()?.getName()!;
+const playerNickname = client
+  .getModuleManager()
+  .getModuleByName("Nickname")
+  ?.getSettings()[2]
+  .getValue();
+
 client.getModuleManager().registerModule(mod);
+const hivePlayerKill = new RegExp(
+  decodeURI(`^(?=.*${playerName})(?=.*\u00A7c).*`)
+);
+const hiveNickKill = new RegExp(
+  decodeURI(`^(?=.*${playerNickname})(?=.*\u00A7c).*`)
+);
 
 client.on("receive-chat", (ev) => {
   if (ev.isChat && mod.isEnabled() && game.getLocalPlayer()?.isValid()) {
-    if (
-      ev.message.includes(
-        decodeURI(`${game.getLocalPlayer()?.getName()!} \u00A7ckilled`)
-      ) ||
-      ev.message.includes(
-        decodeURI(
-          `${client
-            .getModuleManager()
-            .getModuleByName("Nickname")
-            ?.getSettings()[2]
-            .getValue()} \u00A7ckilled`
-        )
-      )
-    ) {
+    if (ev.message.match(hivePlayerKill) || ev.message.match(hiveNickKill)) {
       getSelectedSound();
       game.playSoundUI(
         soundToPlay,
