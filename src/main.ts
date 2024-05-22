@@ -27,7 +27,7 @@ client.on("receive-chat", (ev) => {
         soundPitch.getValue()
       );
       if (debugMode.getValue()) {
-        script.log(
+        clientMessage(
           `Played ${soundToPlay} at vol ${soundVolume.getValue()} and pitch ${soundPitch.getValue()}`
         );
       }
