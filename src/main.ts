@@ -18,6 +18,15 @@ client.on("receive-chat", (ev) => {
     if (
       ev.message.includes(
         decodeURI(`${game.getLocalPlayer()?.getName()!} \u00A7ckilled`)
+      ) ||
+      ev.message.includes(
+        decodeURI(
+          `${client
+            .getModuleManager()
+            .getModuleByName("Nickname")
+            ?.getSettings()[2]
+            .getValue()} \u00A7ckilled`
+        )
       )
     ) {
       getSelectedSound();
