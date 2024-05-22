@@ -6,21 +6,17 @@ import {
 } from "./modOptions";
 
 export let soundToPlay: string = "random.orb";
-let soundOptions;
-let chosenSoundOption;
 
-// i could probably do this without needing a loop running every 500ms, but meh
-setInterval(() => {
-  soundOptions = [
-    { condition: useOrbSound.getValue(), sound: "random.orb" },
-    { condition: useExplosionSound.getValue(), sound: "random.explode" },
-    { condition: useScreenshotSound.getValue(), sound: "random.screenshot" },
-    {
-      condition: usePillagerDeathSound.getValue(),
-      sound: "mob.pillager.death",
-    },
-  ];
-
-  chosenSoundOption = soundOptions.find((option) => option.condition);
-  soundToPlay = chosenSoundOption ? chosenSoundOption.sound : "random.orb";
-}, 500);
+export function getSelectedSound() {
+  if (useOrbSound.getValue()) {
+    soundToPlay = "random.orb";
+  } else if (useExplosionSound.getValue()) {
+    soundToPlay = "random.explode";
+  } else if (useScreenshotSound.getValue()) {
+    soundToPlay = "random.screenshot";
+  } else if (usePillagerDeathSound.getValue()) {
+    soundToPlay = "mob.pillager.death";
+  } else {
+    soundToPlay = "random.orb";
+  }
+}

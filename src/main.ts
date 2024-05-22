@@ -1,7 +1,7 @@
 // Script GitHub repository: https://github.com/Plextora/KillNotif
 // Currently only works on The Hive
 
-import { soundToPlay } from "./killSounds";
+import { getSelectedSound, soundToPlay } from "./killSounds";
 import { soundVolume, soundPitch, debugMode } from "./modOptions";
 
 export let mod: Module = new Module(
@@ -20,6 +20,7 @@ client.on("receive-chat", (ev) => {
         decodeURI(`${game.getLocalPlayer()?.getName()!} \u00A7ckilled`)
       )
     ) {
+      getSelectedSound();
       game.playSoundUI(
         soundToPlay,
         soundVolume.getValue(),
