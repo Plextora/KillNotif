@@ -1,6 +1,6 @@
 {
   "name": "kill-notif",
-  "version": "2.0.0",
+  "version": "2.1.2",
   "description": "Plays a sound whenever you kill someone on supported servers",
   "main": "index.js",
   "type": "module",

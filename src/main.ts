@@ -6,7 +6,7 @@ import { soundVolume, soundPitch, debugMode } from "./modOptions";
 
 export const mod: Module = new Module(
   "KillNotif",
-  "Kill Notif",
+  "Kill Notification",
   "Plays a sound whenever you kill someone on supported servers",
   KeyCode.None
 );

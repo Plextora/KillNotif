@@ -1,6 +1,6 @@
 {
-  "name": "Kill Notif",
-  "version": "2.0.0",
+  "name": "Kill Notification",
+  "version": "2.1.2",
   "author": "Plextora",
   "description": "Plays a sound whenever you kill someone on supported servers"
 }
