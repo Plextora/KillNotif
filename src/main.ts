@@ -15,7 +15,11 @@ client.getModuleManager().registerModule(mod);
 
 client.on("receive-chat", (ev) => {
   if (ev.isChat && mod.isEnabled() && game.getLocalPlayer()?.isValid()) {
-    if (ev.message.includes(`${game.getLocalPlayer()?.getName()!} §ckilled`)) {
+    if (
+      ev.message.includes(
+        decodeURI(`${game.getLocalPlayer()?.getName()!} \u00A7ckilled`)
+      )
+    ) {
       game.playSoundUI(
         soundToPlay,
         soundVolume.getValue(),
