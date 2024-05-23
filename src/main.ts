@@ -22,10 +22,10 @@ client.getModuleManager().registerModule(mod);
 
 // https://regex101.com/r/V3RC36/2
 const hivePlayerKill = new RegExp(
-  decodeURI(`^.*${playerName}.*=\u00A7c.*$|You killed`)
+  decodeURI(`^.*${playerName}.*\u00A7c.*$|You killed`)
 );
 const hiveNickKill = new RegExp(
-  decodeURI(`^.*${playerNickname}.*=\u00A7c.*$|You killed`)
+  decodeURI(`^.*${playerNickname}.*\u00A7c.*$|You killed`)
 );
 
 client.on("receive-chat", (ev) => {
